@@ -1,48 +1,48 @@
 /*
-  Estilos globales para la app.
-  Define variables CSS y estilos por defecto para texto, links, botones y body.
+  Estilos base globales para la aplicación MiDoc.
+  Define fuentes, esquema de color, comportamiento del renderizado de texto, etc.
 */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: light dark; /* Admite tema claro/oscuro */
+  color: rgba(255, 255, 255, 0.87); /* Color de texto base en modo oscuro */
+  background-color: #242424; /* Fondo base en modo oscuro */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  font-synthesis: none; /* Desactiva estilos automáticos de fuentes */
+  text-rendering: optimizeLegibility; /* Mejora legibilidad en navegadores modernos */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Estilo para los links */
+/* Estilos para enlaces */
 a {
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: #646cff; /* Azul vibrante */
+  text-decoration: inherit; /* Evita subrayado por defecto */
 }
 a:hover {
-  color: #535bf2;
+  color: #535bf2; /* Azul más fuerte al hacer hover */
 }
 
-/* Elimina márgenes y centra el contenido */
+/* Reseteo del body + centrado vertical */
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  place-items: center; /* Centra contenido en pantalla */
+  min-width: 320px; /* Soporte para celulares */
   min-height: 100vh;
 }
 
-/* Títulos */
+/* Encabezados principales */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
-/* Botones base */
+/* Estilo base para botones */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -50,19 +50,23 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #1a1a1a; /* Botón oscuro por defecto */
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+/* Hover del botón */
 button:hover {
   border-color: #646cff;
 }
+
+/* Enfoque accesible */
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* Soporte para modo claro */
+/* Modo claro automático basado en preferencias del sistema */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
